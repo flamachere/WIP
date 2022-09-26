@@ -15,6 +15,17 @@
         </style>
         <script>
             $(function() {
+
+                var iconDW = L.icon({
+                    iconURL: 'https://cdn-icons-png.flaticon.com/512/1423/1423756.png',
+                    shadowURL: 'https://cdn-icon-png.flaticon.com/512/1423/1423756.png',
+                    
+                    iconSize: [38, 38],
+                    shadowSize: [39, 39],
+                    shadowAnchor: [4, 38],
+                    iconAnchor: [22, 94]
+                });
+                
                 var map1 = L.map('map1').setView([42.51961, -70.8966], 6);
                 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OpenStreetMap contributors'}).addTo(map1);
 
@@ -23,6 +34,11 @@
                     fillcolor: '#EEE',
                     fillOpacity: 0.5
                 }).addTo(map1);
+
+                var marker = L.marker([42.77521, -71.07597], {
+                    title: "Arkhaam"
+                }).addTo(map1);
+                
             });
         </script>
     </head>
